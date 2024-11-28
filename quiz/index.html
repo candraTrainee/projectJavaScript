@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- remix icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		<div class="start-screen">
+			<button id="start-button">Start</button>
+		</div>
+		<div id="display-container">
+			<div class="header">
+				<div class="number-of-count">
+					<span class="number-of-question">
+						1 of 3 question
+					</span>
+				</div>
+				<div class="timer-div">
+					<i class="ri-timer-line"> 10s</i>
+					<span class="time-left"></span>
+				</div>
+			</div>
+			<div id="container">
+				<!-- question and display -->
+			</div>
+			<button id="next-button">Next</button>
+		</div>
+		<div class="score-container hide">
+			<div id="user-score">Demo Score</div>
+			<button id="restart">Restart</button>
+		</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
