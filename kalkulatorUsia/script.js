@@ -9,52 +9,52 @@ function btnCalculator(){
 	let today = new Date();
 	let inputData = new Date(document.getElementById('data-input').value);
 
-	let brithDetail = {
+	let detailKelahiran = {
 		date:inputData.getDate(),
 		month:inputData.getMonth() + 1,
 		year:inputData.getFullYear()
 	}
-	let currentYear = today.getFullYear();
-	let currentMonth = today.getMonth() + 1;
-	let currentDate = today.getDate();
+	let currentTahun = today.getFullYear();
+	let currentBulan = today.getMonth() + 1;
+	let currentHari = today.getDate();
 
-	leapChecker(currentYear);
+	leapChecker(currentTahun);
 	if(
-		brithDetail.year > currentYear ||
-		(brithDetail.month > currentMonth && 
-		brithDetail.year == currentYear) ||
-		(brithDetail.date > currentDate && brithDetail.month == currentMonth && brithDetail.year == currentYear)
+		detailKelahiran.year > currentTahun ||
+		(detailKelahiran.month > currentBulan && 
+		detailKelahiran.year == currentTahun) ||
+		(detailKelahiran.date > currentHari && detailKelahiran.month == currentBulan && detailKelahiran.year == currentTahun)
 	){
 		alert('Anda belum Lahir')
 		return;
 	}
 
-	let brithYear = currentYear - brithDetail.year;
-	let brithMounth, brithDate;
+	let brithTahun = currentTahun - detailKelahiran.year;
+	let brithBulan, brithHari;
 
 	// Menghitung selisih bulan
-	if (currentMonth >= brithDetail.month) {
-			brithMounth = currentMonth - brithDetail.month;
+	if (currentBulan >= detailKelahiran.month) {
+			brithBulan = currentBulan - detailKelahiran.month;
 	} else {
-			brithYear--;
-			brithMounth = 12 + currentMonth - brithDetail.month;
+			brithTahun--;
+			brithBulan = 12 + currentBulan - detailKelahiran.month;
 	}
 
 	// Menghitung selisih tanggal
-	if (currentDate >= brithDetail.date) {
-			brithDate = currentDate - brithDetail.date;
+	if (currentHari >= detailKelahiran.date) {
+			brithHari = currentHari - detailKelahiran.date;
 	} else {
-			brithMounth--;
-			let days = mounts[currentMonth - 2];
-			brithDate = days + currentDate - brithDetail.date;
-			if (brithMounth < 0) {
-					brithMounth = 11;
-					brithYear--;
+			brithBulan--;
+			let days = mounts[currentBulan - 2];
+			brithHari = days + currentHari - detailKelahiran.date;
+			if (brithBulan < 0) {
+					brithBulan = 11;
+					brithTahun--;
 			}
 	}
-	tahun.innerHTML = brithYear;
-	bulan.innerHTML = brithMounth;
-	hari.innerHTML = brithDate;
+	tahun.innerHTML = brithTahun;
+	bulan.innerHTML = brithBulan;
+	hari.innerHTML = brithHari;
 }
 
 function leapChecker(year){
