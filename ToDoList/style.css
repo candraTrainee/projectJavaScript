@@ -1,0 +1,95 @@
+*,
+*:before,
+*:after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	background: linear-gradient(135deg, #433563, #61ffa0);
+}
+.container{
+	width: 40%;
+	min-width: 450px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	padding: 30px 20px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#newtask{
+	background-color: #fff;
+	padding:  30px 20px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#newtask input{
+	width: 70%;
+	height: 70%;
+	height: 45px;
+	font-family: "Poppins", serif;
+	font-size: 15px;
+	border: 2px solid #d1d3d4;
+	padding: 12px;
+	color: #111;
+	font-weight: 500;
+	position: relative;
+}
+#newtask input:focus{
+	outline: none;
+	border-color: #387d2c;
+}
+#newtask button{
+	position: relative;
+	float: right;
+	width: 20%;
+	height: 45px;
+	border-radius: 5px;
+	font-family: "Poppins", serif;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	background-color: #387d2c;
+}
+#tasks{
+	background-color: #fff;
+	padding: 30px 20px;
+	margin-top: 60px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+	width: 100%;
+	position: relative;
+}
+.task{
+	background-color: #fff;
+	height: 50px;
+	padding: 5px 10px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid #d1d3d4;
+	cursor: pointer;
+}
+.task span{
+	font-family: "Poppins", serif;
+	font-size: 15px;
+	font-weight: 400;
+}
+.task button{
+	background-color: #387d2c;
+	color: #fff;
+	height: 100%;
+	width: 40px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+.completed span{
+	text-decoration: line-through;
+}
