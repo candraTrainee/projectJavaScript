@@ -2,10 +2,11 @@ const searchForm = document.getElementById('search-form');
 const searchBox = document.getElementById('search-box');
 const searchResult = document.getElementById('search-result');
 const showBtn = document.getElementById('show-more-btn');
-const accesKey = 'You API Key unsplash';
+const accesKey = 'your API Key Unspalsh';
 
 let keyWord = '';
 let page = 1;
+showBtn.style.display = 'none';
 
 async function searchImg(){
 	keyWord = searchBox.value;
@@ -28,12 +29,14 @@ async function searchImg(){
 		imageLink.appendChild(image);
 		searchResult.appendChild(imageLink);
 	});
-	showBtn.style.display = 'block';
-	searchBox.value = '';  // Mengosongkan input setelah pencarian
+	if (results.length > 0) {
+		showBtn.style.display = 'block';
+  	}
 };
 searchForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	page = 1;
+	showBtn.style.display = 'none';
 	searchImg();
 });
 showBtn.addEventListener('click', () => {
