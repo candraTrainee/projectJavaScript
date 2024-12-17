@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- remixIcon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>App Casir Sederhana</h1>
+		<div class="bungkus">
+			<div class="kontainer">
+				 <div class="sub-kontainer">
+					  <!-- Budget -->
+					  <div class="total-amount-container">
+							<h3>Total Uang</h3>
+							<p class="sembunyi error" id="error-anggaran">Nilai tidak boleh kosong atau negatif</p>
+							<input type="number" id="total-anggaran" placeholder="Masukkan total uang ...">
+							<button class="kirim" id="tombol-set-anggaran">Set Anggaran</button>
+					  </div>
+	  
+					  <!-- Pengeluaran -->
+					  <div class="user-amount-container">
+							<h3>Barang yang di belanjakan</h3>
+							<p class="sembunyi error" id="error-judul-produk">Nilai tidak boleh kosong</p>
+							<input type="text" class="judul-produk" id="judul-produk" placeholder="Nama produk">
+							<input type="number" id="jumlah-pengeluaran" placeholder="Biaya produk">
+							<button class="kirim" id="cek-jumlah">Periksa jumlah</button>
+					  </div>
+				 </div>
+	  
+				 <!-- Output -->
+				 <div class="output-container flex-space">
+					  <div>
+							<p>Total Uang</p>
+							<span id="jumlah-anggaran">0</span>
+					  </div>
+					  <div>
+							<p>Pengeluaran</p>
+							<span id="nilai-pengeluaran">0</span>
+					  </div>
+					  <div>
+							<p>Sisa Uang</p>
+							<span id="jumlah-sisa">0</span>
+					  </div>
+				 </div>
+			</div>
+	  
+			<!-- Daftar Pengeluaran -->
+			<div class="daftar">
+				 <h3>Detail Pengeluaran</h3>
+				 <div class="daftar-konten" id="daftar"></div>
+			</div>
+	  </div>
+	</div>
+	
+
+	<script src="script.js"></script>
+</body>
+</html>
