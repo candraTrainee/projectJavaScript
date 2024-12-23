@@ -1,0 +1,88 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", serif;
+}
+body{
+	background: #80ad8c;
+}
+.container{
+	width: 400px;
+	padding: 25px 35px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container p{
+	font-weight: 600;
+	font-size: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.container input{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #494eea;
+	outline: none;
+	padding: 10px;
+	margin: 10px 0 20px;
+	border-radius: 5px;
+}
+.container button{
+	width: 100%;
+	height: 50px;
+	background: #494eea;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 20px 0;
+	font-weight: 500;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	transition: .3s;
+}
+.container button:hover{
+	box-shadow: none;
+}
+#imgBox {
+	width: 200px;
+	border-radius: 5px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .3s;
+}
+#imgBox img{
+	width: 100%;
+	padding: 10px;
+}
+#imgBox.show-img{
+	max-height: 300px;
+	margin: 10px auto;
+	border: 1px solid #d1d1d1;
+}
+.error{
+	animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+	0%{
+		transform: translateX(0);
+	}
+	25%{
+		transform: translateX(-2px);
+	}
+	50%{
+		transform: translateX(0);
+	}
+	75%{
+		transform: translateX(2px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
